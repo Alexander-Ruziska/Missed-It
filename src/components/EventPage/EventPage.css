@@ -1,0 +1,189 @@
+/* EventPage.css */
+
+#eventPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.event-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.event-feature-image {
+  width: 100%;
+  text-align: center;
+}
+
+.event-feature-image img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.event-feature-image img:hover {
+  transform: scale(1.02);
+}
+
+.event-feature-text {
+  text-align: center;
+  max-width: 500px;
+}
+
+.event-photo-grid {
+  margin-top: 2rem;
+}
+
+.photo-tile {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.photo-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.photo-tile img {
+  border-radius: 6px;
+}
+
+.event-cover-container {
+  text-align: center;
+}
+
+.event-cover-container img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.event-cover-container img:hover {
+  transform: scale(1.02);
+}
+
+.social-links {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Modal Styles */
+.custom-modal-size .modal-dialog {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.custom-modal-header {
+  border: none;
+  padding: 10px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.85em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #eventPage {
+    padding: 10px;
+  }
+  
+  .event-feature {
+    flex-direction: column;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .action-buttons button {
+    margin: 5px 0 !important;
+  }
+  
+  .social-links .d-flex {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+}
+
+/* Form Styling */
+.form-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Card Header Enhancement */
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+/* Loading Animation */
+.spinner-border {
+  color: #007bff;
+}
+
+/* Nav Tabs */
+.nav-tabs .nav-link {
+  color: #495057;
+  border: 1px solid transparent;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: #e9ecef #e9ecef #dee2e6;
+  color: #007bff;
+}
+
+.nav-tabs .nav-link.active {
+  color: #007bff;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
