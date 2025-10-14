@@ -1,4 +1,4 @@
-/* App.css - Event Tracker App Styles */
+/* App.css - Missed It App Styles */
 
 .App {
   min-height: 100vh;
@@ -6,124 +6,303 @@
   flex-direction: column;
 }
 
-/* Ensure main content takes remaining space */
-.container {
-  flex: 1;
+/* Apply artist page styling to main app container */
+#artistPage, .main-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 3px !important; 
+}
+
+#artistPage .card, .card {
+    border-radius: 3px !important; 
+}
+  
+#artistPage h1, h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#artistPage h4, h4 {
+    font-size: 1.75rem;
+    margin-top: 30px;
+}
+
+#artistPage p, p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#artistPage .btn, .btn {
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 3px !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#artistPage .btn:hover, .btn:hover {
+    transform: translateY(-1px);
+}
+
+#artistPage .btn-primary, .btn-primary {
+    background-color: #0066cc;
+    border-color: #0066cc;
+    border-radius: 3px !important;
+}
+
+#artistPage .btn-secondary, .btn-secondary {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+    border-radius: 3px !important;
+}
+
+#artistPage .ms-2, .ms-2 {
+    margin-left: 0.5rem;
+}
+
+#artistPage .card-body img, .card-body img {
+    width: 1180px;
+    height: 700px;
+    border-radius: 0 !important;
+    margin-top: 10px;
+}
+
+#artistPage input, input,
+#artistPage textarea, textarea {
+    border-radius: 0 !important;
+    margin-bottom: 1rem;
+}
+
+#artistPage textarea, textarea {
+    resize: vertical;
+}
+
+#artistPage .form-control, .form-control {
+    font-size: 1rem;
+    border-radius: 0 !important;
+}
+
+#artistPage .form-group label, .form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+#artistPage .form-control:focus, .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.5);
+}
+
+#artistPage button, button {
+    font-size: 1rem;
+    border-radius: 4px !important;
+    padding: 8px 15px;
+}
+
+#artistPage .idea-button, .idea-button {
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 3px !important;
+    background-color: #0066cc;
+    border-color: #0066cc;
+    color: white;
+}
+
+#artistPage .image-preview, .image-preview {
+    margin-top: 10px;
+}
+
+#artistPage .image-preview img, .image-preview img {
+    border-radius: 0 !important;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+#artistPage .artist-feature-image, .artist-feature-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#artistPage .artist-feature-image img, .artist-feature-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+#artistPage .artist-feature-text, .artist-feature-text {
+    text-align: left;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+#artistPage .artist-feature-text p, .artist-feature-text p {
+    margin-top: 0px;
+    font-size: 1rem;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+#artistPage .artist-photo-grid, .artist-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+#artistPage .artist-photo-grid img, .artist-photo-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+#artistPage .photo-tile p, .photo-tile p {
+    margin: 0px 0;
+    font-size: 1rem;
+}
+
+#artistPage .artist-profile-container, .artist-profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#artistPage .artist-profile-container p, .artist-profile-container p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0;
+}
+
+#artistPage .btn-dark, .btn-dark {
+    border-radius: 3px !important;
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+    color: white !important;
+}
+  
+#artistPage .btn-dark:hover, .btn-dark:hover {
+    background-color: #23272b !important;
+    border-color: #1d2124 !important;
+}
+
+.custom-modal-size .modal-dialog {
+    max-width: 80%;
+    margin: 24px auto;
+}
+
+.custom-modal-size .modal-body {
+    padding: 36px;
+}
+
+.custom-modal-size .modal-body .modal-image {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+.custom-modal-header {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.close-button {
+    font-size: 30px;
+    color: #000;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    font-weight: bold;
+    z-index: 1050;
+    margin: 0;
+}
+
+#linkImg {
+    height: 50px !important;
+    width: 50px !important;
+    display: inline-block !important;
+    padding: 10px !important;
+    align-items: center !important;
+}
+
+.close-button:hover {
+    color: red;
 }
 
 /* Custom Navbar Styling */
 .navbar-brand {
-  font-weight: bold;
-  font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.8);
-  transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #fff;
-}
-
-/* Global Button Styles */
-.btn {
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
+    color: #fff;
 }
 
 /* Footer Styling */
 footer {
-  margin-top: auto;
-  border-top: 1px solid #dee2e6;
+    margin-top: auto;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Ensure main content takes remaining space */
+.container {
+    flex: 1;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-  
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /* Utility Classes */
 .fade-in {
-  animation: fadeIn 0.5s ease-in;
+    animation: fadeIn 0.5s ease-in;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Custom Color Scheme */
-:root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --success-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --card-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Global Card Enhancements */
-.card {
-  border: none;
-  box-shadow: var(--card-shadow);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: var(--card-shadow-hover);
-}
-
-/* Loading States */
-.spinner-border {
-  color: #667eea;
-}
-
-/* Text Enhancements */
-.text-muted {
-  color: #6c757d !important;
-}
-
-/* Custom Badge Colors */
-.badge-event {
-  background: var(--primary-gradient);
-  color: white;
-}
-
-/* Form Enhancements */
-.form-control:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-}
-
-.form-label {
-  font-weight: 600;
-  color: #495057;
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Link Styling */
 a {
-  color: #667eea;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #5a67d8;
-  text-decoration: underline;
+    color: #0052a3;
+    text-decoration: underline;
 }
