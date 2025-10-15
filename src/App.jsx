@@ -10,6 +10,31 @@ import './App.css';
 import EventsList from './components/EventsList/EventsList';
 import EventPage from './components/EventPage/EventPage';
 
+/* 
+🔷 TYPESCRIPT LEARNING NOTE:
+In TypeScript (.tsx), you would define interfaces for your data types:
+
+interface Event {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  location: string;
+}
+
+interface User {
+  id: number;
+  username: string;
+  email: string;
+}
+
+This would give you:
+- Auto-completion when accessing event.title, event.date, etc.
+- Compile-time error checking if you mistype property names
+- Better IDE support with IntelliSense
+- Prevents runtime errors from undefined properties
+*/
+
 function App() {
   return (
     <Router>

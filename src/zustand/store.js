@@ -1,5 +1,58 @@
 import { create } from 'zustand';
 
+/* 
+🔷 TYPESCRIPT LEARNING NOTE - Zustand Store Types:
+In TypeScript, you'd define interfaces for your store state:
+
+interface User {
+  id: number;
+  name: string;
+  event_id: number | null;
+  is_organizer: boolean;
+}
+
+interface Event {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  location: string;
+  organizer: string;
+  phone: string;
+  email: string;
+  website?: string;
+  facebook?: string;
+  instagram?: string;
+  linkedin?: string;
+  cover_photo?: string;
+  profile_pic?: string;
+  is_organizer: boolean;
+  photos: Photo[];
+  attendees: Attendee[];
+}
+
+interface StoreState {
+  eventOBJ: Event | null;
+  events: Event[];
+  user: User;
+  fetchEvent: (eventId: number) => void;
+  fetchEvents: () => void;
+  // ... other actions
+}
+
+const useStore = create<StoreState>((set, get) => ({
+  // TypeScript would then enforce these types throughout your app
+  // and catch errors like: user.id = "string" (should be number)
+}));
+
+This gives you:
+- Type safety for all store operations
+- Auto-completion for store properties
+- Compile-time error checking
+- Better refactoring support
+*/
+
 const useStore = create((set, get) => ({
   // Event state
   eventOBJ: null,

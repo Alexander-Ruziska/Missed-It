@@ -8,6 +8,27 @@ import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
 import './EventsList.css';
 
+/* 
+🔷 TYPESCRIPT LEARNING NOTE - Component Props & State:
+In TypeScript, you'd define the component with proper typing:
+
+interface EventsListProps {
+  // If this component received props, you'd define them here
+  // e.g., initialFilter?: string;
+}
+
+const EventsList: React.FC<EventsListProps> = () => {
+  
+And for the navigate function:
+const navigate = useNavigate();
+
+TypeScript would automatically know that navigate expects:
+- A string path: navigate('/events/123')
+- Or options object: navigate('/events', { replace: true })
+
+This prevents bugs like navigate(123) or navigate() with wrong arguments.
+*/
+
 function EventsList() {
   const navigate = useNavigate();
   const events = useStore((state) => state.events);
@@ -18,6 +39,17 @@ function EventsList() {
     fetchEvents();
   }, [fetchEvents]);
 
+  /* 
+  🔷 TYPESCRIPT LEARNING NOTE - Function Parameters:
+  In TypeScript, this would be:
+  
+  const handleEventClick = (eventId: number | string) => {
+    navigate(`/events/${eventId}`);
+  };
+  
+  This ensures eventId is always a number or string, preventing
+  runtime errors if someone passes undefined or an object.
+  */
   const handleEventClick = (eventId) => {
     navigate(`/events/${eventId}`);
   };
