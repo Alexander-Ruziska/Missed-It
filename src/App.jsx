@@ -43,7 +43,7 @@ function App() {
         <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
           <Container>
             <Navbar.Brand href="/">
-              🎉 Event Tracker
+              Missed It
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
