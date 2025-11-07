@@ -9,7 +9,7 @@ import './App.css';
 // Import components
 import EventsList from './components/EventsList/EventsList';
 import EventPage from './components/EventPage/EventPage';
-
+import NewEvent from './components/NewEvent/NewEvent';
 /* 
 🔷 TYPESCRIPT LEARNING NOTE:
 In TypeScript (.tsx), you would define interfaces for your data types:
@@ -63,6 +63,7 @@ function App() {
             <Route path="/events/:eventId" element={<EventPage />} />
             <Route path="/create" element={<div className="text-center mt-5"><h3>Create Event Page</h3><p>This page would contain a form to create new events.</p></div>} />
             <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="/new-event" element={<NewEvent />} />
           </Routes>
         </Container>
 
